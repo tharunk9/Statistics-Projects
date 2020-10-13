@@ -1,0 +1,39 @@
+######ST502 Group9 Project Workflow######
+#For group members Jonathon Fleming, Cole Dunbar, Tharun Polamarasetty
+
+#All code was run using R-3.6.3 and was tested in a windows 10 command prompt
+#Before running  must install the following packages using the following commands:
+	#install.packages(pkgs = c("plyr", "MCMCpack", "R.utils", "ggplot2", "MBESS", "tidyverse", "ggthemes", "BayesFactor", "devtools", "gridExtra"), repos="http://archive.linux.duke.edu/cran/")
+	#library("devtools") 
+	#devtools::install_github("neurotroph/ReplicationBF")
+
+#####Start of Workflow#####
+#The following commands were tested in windows 10 command prompt
+
+	RScript "location\run_file.R" arg[1]   #(arg[1] is location to output simulation results)  
+	RScript "location\run_file.R" arg[1]   #(arg[1] is location of output from previous command (should be the same))
+
+
+#####End of Workflow#####
+
+###Example:
+	Rscript "C:\Users\name\downloads\run_file.R" "C:\\Users\\name\\desktop"
+	Rscript "C:\Users\name\downloads\out_file.R" "C:\\Users\\name\\desktop"
+
+		### Note the use of \\ in the argument. 
+
+###run_file will output four rds files to the location specified as arg[1] called:
+	#BFrep_Sim1.rds
+	#BFrep_Sim3.rds
+	#BFrep_Ex3.rds
+	#BFrep_Ex3data.rds
+
+###out_file will load in the four rds files and output the following four pdf files to the location specified by arg[1]:
+	#Group_9_Figure_1.pdf
+	#Group_9_Figure_2.pdf
+	#Group_9_Figure_3.pdf
+	#Group_9_Table_1.pdf
+
+
+ 
+
